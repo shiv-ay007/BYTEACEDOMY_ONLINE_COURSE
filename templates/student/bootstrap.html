@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Bootstrap</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      color: #212529;
+    }
+
+    header {
+      background: #563d7c;
+      color: #fff;
+      padding: 30px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    nav {
+      background: #e9ecef;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #563d7c;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s, transform 0.2s;
+    }
+
+    nav a:hover {
+      color: #d63384;
+      transform: scale(1.1);
+    }
+
+    section {
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #563d7c;
+      margin-top: 20px;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    /* Card Styles */
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin: 20px 0;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    footer {
+      background: #563d7c;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bootstrap Framework</h1>
+    <p>The most popular front-end library for responsive web design</p>
+  </header>
+
+  <nav>
+    <a href="#intro">Introduction</a>
+    <a href="#features">Features</a>
+    <a href="#functions">Functions</a>
+    <a href="#libraries">Libraries</a>
+  </nav>
+
+  <section id="intro" class="card">
+    <h2>Introduction</h2>
+    <p>
+      Bootstrap is a free, open-source front-end framework used for designing modern, responsive websites quickly. 
+      It includes ready-to-use HTML, CSS, and JavaScript components that make web development faster and easier.
+    </p>
+  </section>
+
+  <section id="features" class="card">
+    <h2>Features of Bootstrap</h2>
+    <ul>
+      <li>Responsive grid system</li>
+      <li>Pre-designed UI components (buttons, cards, modals, navbars)</li>
+      <li>Cross-browser compatibility</li>
+      <li>Customizable themes and utilities</li>
+      <li>Supports Flexbox and modern CSS</li>
+    </ul>
+  </section>
+
+  <section id="functions" class="card">
+    <h2>Functions of Bootstrap</h2>
+    <p>Bootstrap provides built-in classes and functions that help developers:</p>
+    <ul>
+      <li>Create mobile-first layouts with its grid system</li>
+      <li>Style elements using pre-defined CSS classes</li>
+      <li>Add interactivity with JavaScript components (dropdowns, modals, tooltips)</li>
+      <li>Speed up development by reusing common UI patterns</li>
+    </ul>
+  </section>
+
+  <section id="libraries" class="card">
+    <h2>Bootstrap Libraries</h2>
+    <p>Bootstrap comes with three main parts:</p>
+    <ul>
+      <li><b>Bootstrap CSS</b> → Provides styling, typography, grid system, utilities</li>
+      <li><b>Bootstrap JavaScript</b> → Provides interactivity like modals, carousels, dropdowns</li>
+      <li><b>Bootstrap Icons</b> → A large set of scalable vector icons</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Made with 💜 | Learn Bootstrap to build beautiful responsive websites!</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About C Programming</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      color: #222;
+    }
+
+    header {
+      background-color: #005f99; /* Dark Blue */
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    /* Title in center */
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      text-align: center;
+      flex: 1;
+    }
+
+    /* Logo at right */
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: white;
+      position: absolute;
+      right: 20px;
+    }
+
+    .logo-icon {
+      font-size: 1.8rem;
+      margin-right: 8px;
+    }
+
+    nav {
+      background: #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background: #005f99;
+      color: #fff;
+    }
+
+    section {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #005f99;
+      margin-top: 30px;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    a.link {
+      color: #005f99;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    a.link:hover {
+      color: #ff6600;
+      text-decoration: underline;
+    }
+
+    code, pre {
+      background: #eee;
+      padding: 10px;
+      border-radius: 5px;
+      display: block;
+      margin-top: 10px;
+    }
+
+    footer {
+      background: #005f99;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>C Programming</h1>
+    <!-- Logo on right -->
+    <div class="logo">
+      <span class="logo-icon">🎓</span> Byte Acedomy
+    </div>
+  </header>
+
+  <nav>
+    <a href="#intro">Introduction</a>
+    <a href="#features">Features</a>
+    <a href="#libraries">Libraries</a>
+    <a href="#resources">Resources</a>
+  </nav>
+
+  <section id="intro">
+    <h2>Introduction</h2>
+    <p>
+      C is a general-purpose, procedural programming language developed by Dennis Ritchie at Bell Labs in 1972.  
+      It is one of the most widely used languages in computer science history and has influenced many modern 
+      languages like C++, Java, and C#.  
+      C is known for its performance, low-level memory access, and portability across systems.
+    </p>
+  </section>
+
+  <section id="features">
+    <h2>Key Features of C</h2>
+    <ul>
+      <li>Simple and efficient</li>
+      <li>Low-level access to memory (pointers)</li>
+      <li>Structured programming support</li>
+      <li>Portable across platforms</li>
+      <li>Rich library of built-in functions</li>
+      <li>Foundation for many modern languages</li>
+    </ul>
+  </section>
+
+  <section id="libraries">
+    <h2>Standard Libraries in C</h2>
+    <ul>
+      <li><b>stdio.h</b> – Input and output functions</li>
+      <li><b>stdlib.h</b> – Memory allocation, process control</li>
+      <li><b>string.h</b> – String handling functions</li>
+      <li><b>math.h</b> – Mathematical functions</li>
+      <li><b>time.h</b> – Date and time functions</li>
+      <li><b>ctype.h</b> – Character handling functions</li>
+    </ul>
+  </section>
+
+  <section id="resources">
+    <h2>Useful C Programming Resources</h2>
+    <ul>
+      <li><a class="link" href="https://www.learn-c.org/" target="_blank">Learn-C.org Interactive Tutorial</a></li>
+      <li><a class="link" href="https://www.w3schools.com/c/" target="_blank">C Tutorial - W3Schools</a></li>
+      <li><a class="link" href="https://www.geeksforgeeks.org/c-programming-language/" target="_blank">C Programming - GeeksforGeeks</a></li>
+      <li><a class="link" href="https://en.cppreference.com/w/c" target="_blank">C Standard Library Reference</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Example Program</h2>
+    <p>Here’s a simple C program:</p>
+    <pre><code>
+// Simple Hello World in C
+#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Hello, World!\\n");
+    return 0;
+}
+    </code></pre>
+  </section>
+
+  <footer>
+    <p>Made with 💙 C Programming | The language that started it all!</p>
+  </footer>
+</body>
+</html>

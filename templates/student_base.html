@@ -1,0 +1,216 @@
+{% load static %}
+<html lang="en">
+<head>
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+<link rel="stylesheet" href="{% static 'css/all.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<style>
+   .bg-mycolor1{
+      background: #b90f9f;
+   }
+   .bg-mycolor2{
+      background: #eb3eeb;
+   }
+   .bg-mycolor3{
+      background: #B2EBF2;
+   }
+   .text-mycolor1{
+      color: #c15a72;
+   }
+   .text-mycolor2{
+      color: #00838F;
+   }
+   .text-mycolor3{
+      color: #B2EBF2;
+   }
+   .ic
+   {
+      color: #5795f1;
+      height: 30px;
+      width: 30px;
+      text-align: center;
+      line-height: 28px;
+      border: none;
+      border-radius: 3px;
+   
+   }
+  
+  
+   .ic:hover
+   {
+      color: #00838F;
+      background: #B2EBF2;
+     transform: translate(-5px);
+      transition: all 0.5s ease-in-out;
+
+   }
+   #menu
+   {
+      background: transparent !important;
+   }
+   #menu ul li a
+   {
+      color: #d07676 !important;
+   }
+  
+   .footer
+   {
+    background: rgba(0, 0, 0, 0.808);
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    height: 50px;
+   }
+   #verticalmenu ul li{
+     list-style-type: none;
+     padding-left: 10px;
+     margin-bottom: 10px;
+   }
+   #verticalmenu ul li a{
+      text-decoration: none;
+      font-size: 20px;
+   }
+   .dashboardic{
+      height: 50px;
+      width: 50px;
+      border-radius: 7px;
+      font-size: 25px;
+      line-height: 40px;
+      padding: 5px;
+   }
+   .dashdiv{
+      margin-top: 35px;
+      margin-bottom: 15px;
+   }
+   #dashboard a{
+      text-decoration: none;
+   }
+   .dashboardcard:hover{
+      transform: scale(1.1);
+      transition: 1s;
+
+   }
+   .dashboardcard{
+      transition: 2s;
+   }
+   .profileimg{
+      border-radius: 50%;
+      height: 150px;
+      width: 150px;
+      background: rgb(195, 244, 244);
+      border: 1px solid black;
+   }
+   .username{
+      margin-top: 85px;
+   }
+</style>
+</head>
+<body>
+    <div class="container-fluid">
+      <div class="row header">
+
+<!-- start header -->
+   <div class="col-sm-1"></div>
+         <div class="col-sm-10 pt-4 pb-2">
+            <div class="row">
+               <div class="col-sm-3">
+                 <div class="fs-2">Byte<b class="text-mycolor1">Academy<i class="fa-solid fa-graduation-cap"></i></b></div>
+               </div>
+               <div class="col-sm-2">
+                  <b><i class="fa-solid fa-envelope ic"></i>Mail us</b><br>
+                  shivamyadav993671@gmail.ocm
+               </div>
+               <div class="col-sm-2"><b>
+                  <i class="fa-solid fa-phone ic"></i>Call us</b><br>
+                  +917266079663
+               </div>
+               <div class="col-sm-2">
+                  <b>Follow us</b><br>
+                  <i class="fab fa-facebook ic"></i><i class="fab fa-twitter ic"></i><i class="fab fa-instagram ic"></i><i class="fa-brands fa-linkedin ic"></i>
+               </div>
+               
+                  <div class="col-sm-2">
+                  {% if request.session.email %}
+                  <img src="/{{request.session.userpic}}" class="img-thumbnail" style="height: 50px; width: 50px;"/>
+                  <b>{{request.session.name}}</b><br>
+               {{request.session.email}}
+               {% else %}
+               <img src="{% static 'images/user1.webp' %}" style="height: 40px; width: 40px;"/>
+               <b>guest@gmail.com</b>
+               {% endif %}
+               </div>
+               </div>
+         </div>
+         <div class="col-sm-1"></div>
+          </div>
+<!-- end header -->
+    
+
+    <!--vertical menu start -->
+    <div class="row bg-mycolor2">
+      <div class="col-sm-12">
+         <a class="btn " data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+ <i class="fa-solid fa-bars"></i>
+</a>
+
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">OUR Services</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body bg-mycolor1" id="verticalmenu">
+   <ul>
+     
+       <li class="nav-item">
+          <a class="nav-link active " aria-current="page" href="/student/dashboard/"><i class="fa-solid fa-house ic"></i>Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/student/lecturecat/"><i class="fa-solid fa-info-circle ic"></i> video by category</a>
+        </li>
+        
+         <li class="nav-item">
+          <a class="nav-link" href="/student/task/"><i class="fa-solid fa-book ic"></i>Our Task</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="/student/enotes/"><i class="fa-solid fa-book ic"></i> E-notes</a>
+        </li>
+           <li class="nav-item">
+          <a class="nav-link" href="/student/softwarekit/"><i class="fa-solid fa-gears ic"></i> Software Kit</a>
+        </li>
+            <li class="nav-item">
+            <a class="nav-link" href="/student/profile/"><i class="fa-solid fa-user ic"></i> My Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/student/signout/"><i class="fa-solid fa-sign-out-alt ic"></i> Sign Out</a>
+         </li>
+      
+   </ul>
+   
+  </div>
+</div>
+      </div>
+    </div>
+     <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+    <!--vwertical menu end-->
+    <div class="row py-2">
+
+    </div>
+    
+    
+      {% block content %}
+        {% endblock %}
+        <div class="row footer">
+        <div class="col-sm-6">
+            <p>&copy; My Project. All rights reserved.</p>
+        </div>
+        <div class="col-sm-6">
+            Designed by <a class="text-mycolor1" href="/profile/">shivam yadav</a>
+        </div>
+      </div>
+      
+      </div>
+      <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+      </div>
+  

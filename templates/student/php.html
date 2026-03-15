@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About PHP</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fdf6f0;
+      color: #222;
+    }
+
+    header {
+      background-color: #4F5B93; /* PHP Purple */
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      text-align: center;
+      flex: 1;
+    }
+
+    /* Logo right side */
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: white;
+      position: absolute;
+      right: 20px;
+    }
+
+    .logo-icon {
+      font-size: 1.8rem;
+      margin-right: 8px;
+    }
+
+    nav {
+      background: #222;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background: #ff6600; /* Orange hover */
+      color: #fff;
+    }
+
+    section {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #4F5B93;
+      margin-top: 30px;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    a.link {
+      color: #4F5B93;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    a.link:hover {
+      color: #ff6600;
+      text-decoration: underline;
+    }
+
+    code, pre {
+      background: #eee;
+      padding: 10px;
+      border-radius: 5px;
+      display: block;
+      margin-top: 10px;
+    }
+
+    footer {
+      background: #4F5B93;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>PHP Programming</h1>
+    <!-- Logo on right -->
+    <div class="logo">
+      <span class="logo-icon">🐘</span> Byte Acedomy
+    </div>
+  </header>
+
+  <nav>
+    <a href="#intro">Introduction</a>
+    <a href="#features">Features</a>
+    <a href="#libraries">Libraries</a>
+    <a href="#resources">Resources</a>
+  </nav>
+
+  <section id="intro">
+    <h2>Introduction</h2>
+    <p>
+      PHP (Hypertext Preprocessor) is a widely-used open-source scripting language especially suited for 
+      web development. It was created by Rasmus Lerdorf in 1994 and can be embedded into HTML to create 
+      dynamic and interactive web pages.
+    </p>
+  </section>
+
+  <section id="features">
+    <h2>Key Features of PHP</h2>
+    <ul>
+      <li>Open-source and free to use</li>
+      <li>Server-side execution for dynamic websites</li>
+      <li>Easy integration with HTML, CSS, and JavaScript</li>
+      <li>Supports databases like MySQL, PostgreSQL, MongoDB</li>
+      <li>Cross-platform and portable</li>
+      <li>Large community and strong documentation</li>
+    </ul>
+  </section>
+
+  <section id="libraries">
+    <h2>Popular PHP Libraries & Frameworks</h2>
+    <ul>
+      <li><b>Laravel</b> – Modern PHP framework for web apps</li>
+      <li><b>Symfony</b> – Reusable PHP components & framework</li>
+      <li><b>CodeIgniter</b> – Lightweight PHP framework</li>
+      <li><b>Composer</b> – Dependency manager for PHP</li>
+      <li><b>Guzzle</b> – HTTP client for PHP</li>
+      <li><b>PHPUnit</b> – Testing framework for PHP</li>
+    </ul>
+  </section>
+
+  <section id="resources">
+    <h2>Useful PHP Resources</h2>
+    <ul>
+      <li><a class="link" href="https://www.php.net/" target="_blank">Official PHP Website</a></li>
+      <li><a class="link" href="https://www.w3schools.com/php/" target="_blank">PHP Tutorial - W3Schools</a></li>
+      <li><a class="link" href="https://www.geeksforgeeks.org/php-tutorial/" target="_blank">PHP Programming - GeeksforGeeks</a></li>
+      <li><a class="link" href="https://laravel.com/" target="_blank">Laravel Framework</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Example PHP Code</h2>
+    <p>Here’s a simple PHP program that outputs "Hello, World!":</p>
+    <pre><code>
+&lt;?php
+  echo "Hello, World!";
+?&gt;
+    </code></pre>
+  </section>
+
+  <footer>
+    <p>Made with 🐘 PHP | Powering the Web with Byte Acedomy</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{%  block content %}
+<style>
+    .fae {
+      background:linear-gradient(45deg, rgba(0, 188, 212, 0.6), rgba(255, 255, 255, 0.6)),url("{% static 'images/image1.jpg' %}");
+        background-size: cover;
+        min-height: 500px;
+    }
+  
+    .form-control
+    {
+        height: 55px;
+        border: none !important;
+        margin: 10px 0px;
+    }
+</style>
+
+ <div class="col-sm-6 mx-auto">
+<div class="row heading mt-3">
+    <div class="text-center fs-3">Register<b class="text-mycolor1"> Now <i class="fa-solid fa-user-plus"></i></b>
+    <p class="text-muted fs-6"> Register Now To go dashboard</p>
+    </div>
+    <hr>
+</div>
+</div>
+    <!-- heading end -->
+
+    <div class="row">
+        <div class="col-sm-10 mx-auto bg-light shadow-lg p-4 fae">
+            <div class="row">
+              <div class="col-md-5">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        <!-- Name -->
+        <input name="name" type="text" required placeholder="Enter your full name" class="form-control mb-2">
+        
+        <!-- Email  -->
+        <input name="email" type="email" required placeholder="Enter your email (e.g. example@gmail.com)" 
+               class="form-control mb-2" 
+               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+               title="Enter a valid email address like example@gmail.com">
+        
+        <!-- Mobile  -->
+        <input name="mob" type="tel" required placeholder="Enter mobile number (e.g. 7266079663)" 
+               class="form-control mb-2" 
+               pattern="[6-9][0-9]{9}"
+               title="Enter a valid 10-digit mobile number starting with 6, 7, 8, or 9">
+        
+        <!-- Password -->
+        <input name="passwd" type="password" required placeholder="Create a strong password" 
+               class="form-control mb-2" minlength="6"
+               title="Password must be at least 6 characters long">
+        
+        <!-- File Upload -->
+        <input name="fu" type="file" required class="form-control mb-2" 
+               title="Upload your photo or document">
+        
+        <!-- Address -->
+        <textarea class="form-control mb-2" style="min-height: 80px;" name="address" placeholder="Enter your full address"></textarea>
+        
+        <!-- Submit Button -->
+        <input type="submit" value="Register" class="btn bg-mycolor1 w-100 mt-3 form-control">
+    </form>
+</div>
+
+               
+                     <!-- slider content -->
+               <div class="col-sm-7 py-5">
+                  <div class="fs-1 text-center mt-5 pt-5 text-light text-uppercase">Welcome to BYTE <b class="text-mycolor1">ACADEMY <i class="fa-solid fa-graduation-cap"></i></b>
+                  </div>
+                  <div class="text-light text-center ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore impedit maiores reiciendis et explicabo
+                     recusandae consectetur est ullam excepturi,
+                      deserunt adipisci pariatur sunt, perferendis iste totam nam officiis. Consectetur, asperiores!</div>
+                     
+               </div>
+               <!-- end slider content -->
+                
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

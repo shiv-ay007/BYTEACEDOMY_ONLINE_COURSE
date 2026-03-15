@@ -1,0 +1,414 @@
+{% load static %}
+<html lang="en">
+
+<head>
+   <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+   <link rel="stylesheet" href="{% static 'css/all.css' %}">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+   <style>
+      .bg-mycolor1 {
+         background: #cc7f27;
+      }
+
+      .bg-mycolor2 {
+         background: #9a480d;
+      }
+
+      .bg-mycolor3 {
+         background: #B2EBF2;
+      }
+
+      .text-mycolor1 {
+         color: #d44a00;
+      }
+
+      .text-mycolor2 {
+         color: #5d8f00;
+      }
+
+      .text-mycolor3 {
+         color: #B2EBF2;
+      }
+
+      .ic {
+         color: #00BCD4;
+         height: 30px;
+         width: 30px;
+         text-align: center;
+         line-height: 28px;
+         border: none;
+         border-radius: 3px;
+
+      }
+
+      .ufooter {
+         min-height: 250px;
+         background: black;
+      }
+
+      .bfooter {
+         min-height: 50px;
+         background: black;
+      }
+
+      .ic:hover {
+         color: #00838F;
+         background: #B2EBF2;
+         transform: translate(-5px);
+         transition: all 0.5s ease-in-out;
+
+      }
+
+      #menu {
+         background: transparent !important;
+      }
+
+      #menu ul li a {
+         color: #fff !important;
+      }
+
+      .slider {
+         min-height: 450px;
+         background:linear-gradient(45deg, rgba(41, 40, 40, 0.1), rgba(0, 188, 212, 0.6)),
+         url("{% static 'images/slider1.jpg' %}");
+         background-size: cover;
+         background-attachment: fixed;
+      }
+
+      .aboutcontent {
+         font-size: 16px;
+         line-height: 1.6;
+         color: #333;
+      }
+
+      .im {
+         height: 180px;
+         width: 100%;
+      }
+
+      .imgpic {
+         height: 200px;
+         transform: scale(1);
+         transition: transform 0.5s ease;
+      }
+
+      .imgpic:hover {
+         transform: scale(1.1);
+      }
+
+      .imgteam {
+         height: 300px;
+
+      }
+
+      .imgabout {
+         height: 325px;
+         width: 100%;
+      }
+
+      .catic {
+         height: 60px;
+         width: 60px;
+         font-size: 30px;
+         border: 1px solid black;
+         border-radius: 7px;
+         line-height: 60px;
+         transition: transform 2s ease;
+      }
+
+      .catic:hover {
+         background: #00BCD4;
+         color: white;
+
+
+      }
+
+      .catimg {
+         height: 150px;
+         width: 100%;
+      }
+
+      .popularcat {
+         border: 0px;
+      }
+
+      .popularcat:hover {
+         transform: scale(1.1);
+         transition: transform 0.5s ease;
+      }
+
+      .txt {
+         height: 50px;
+         margin-bottom: 4%;
+         border-radius: 0px;
+         border: none !important;
+         border-bottom: 2px solid #ffffff !important;
+         background: transparent !important;
+         color: #00BCD4;
+         border-radius: 0px !important;
+      }
+
+      .ta {
+         height: 80px;
+         margin-bottom: 4%;
+         border-radius: 0px !important;
+         border: none !important;
+         border-bottom: 2px solid #ffffff !important;
+         background: transparent !important;
+         color: #00BCD4;
+      }
+
+      .btn1 {
+         height: 50px !important;
+         color: white !important;
+      }
+
+      .login {
+         background: rgba(0, 0, 0, 0.268);
+         backdrop-filter: blur(5px);
+      }
+
+      .contact {
+         background: lightsalmon;
+      }
+
+      .bgcontact {
+         background-image: url("{% static 'images/form2.jpeg'%}");
+         background-repeat: no-repeat;
+         background-size: cover;
+      }
+      .logo-img {
+    width: 150px; /* adjust size for your header */
+    height: 90px;
+    border-radius: 10px; /* use 50% if you want a circle */
+    object-fit: cover;
+    background: linear-gradient(145deg, #0d1b2a, #1b263b);
+    box-shadow: 0 5px 15px rgba(0, 170, 255, 0.6),
+                inset 0 2px 6px rgba(255, 255, 255, 0.2);
+    border: 3px solid #00aaff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .logo-img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(0, 170, 255, 0.8),
+                inset 0 3px 8px rgba(255, 255, 255, 0.3);
+  }
+   </style>
+</head>
+
+<body>
+   <div class="container-fluid">
+      <div class="row header">
+
+         <!-- start header -->
+         <div class="col-sm-1"></div>
+         <div class="col-sm-10 py-4">
+            <div class="row">
+               <div class="col-sm-3">
+                  <div class="fs-2">Byte<b class="text-mycolor1">Academy<i class="fa-solid fa-graduation-cap"></i></b>
+                  </div>
+               </div>
+               <div class="col-sm-2">
+                  <b><i class="fa-solid fa-envelope ic"></i>Mail us</b><br>
+                  shivamyadav993671@gmial.com
+               </div>
+               <div class="col-sm-2"><b>
+                     <i class="fa-solid fa-phone ic"></i>Call us</b><br>
+                  +917266079663
+               </div>
+               <div class="col-sm-2">
+                  <b>Follow us</b><br>
+                  
+                   <a href="https://www.instagram.com/shivam._.yadav007?igsh=bnhlN3RlOG5qNWw4"><i class="fa-brands fa-instagram ic"></i></a>
+                     <a href="https://www.facebook.com/shivam.yadav.728711"><i class="fa-brands fa-facebook ic"></i></a>
+                     <a href="https://www.linkedin.com/in/shivam-yadav-5950442b1 "><i class="fa-brands fa-linkedin ic"></i></a>
+               
+               </div>
+               <div class="col-sm-2">
+               </div>
+            </div>
+         </div>
+        <div class="col-sm-1 text-center">
+  <img 
+    class="img-fluid logo-img" 
+    src="{% static 'images/byte acedomy logo.png' %}" 
+    alt="Byte Academy Logo">
+</div>
+      </div>
+      <!-- end header -->
+
+      <!-- start menu -->
+
+      <div class="row menu bg-mycolor1">
+         <div class="col-sm-8 mx-auto">
+
+            <nav class="navbar navbar-expand-lg bg-body-tertiary" id="menu">
+               <div class="container-fluid">
+
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                     aria-expanded="false" aria-label="Toggle navigation">
+                     <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                           <a class="nav-link active" aria-current="page" href="/index/"><i
+                                 class="fa-solid fa-house"></i> Home</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="/aboutus/"><i class="fa-solid fa-info-circle"></i> About us</a>
+                        </li>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="/register/"><i class="fa-solid fa-user-plus"></i> Register</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="/services/"><i class="fa-solid fa-briefcase"></i> Services</a>
+                        </li>
+
+                        <li class="nav-item">
+                           <a class="nav-link" href="/gallery/"><i class="fa-solid fa-image"></i> Gallery</a>
+                        </li>
+
+                        <li class="nav-item">
+                           <a class="nav-link" href="/team/"><i class="fa-solid fa-users"></i> Our Team</a>
+                        </li>
+                       
+
+
+
+                        <!--
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        -->
+                        <li class="nav-item">
+                           <a class="nav-link" href="/contact/"><i class="fa-solid fa-question-circle"></i> contact</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                           <a class="nav-link" href="#"><i class="fa-solid fa-comment-dots"></i> Feedback</a>
+                        </li> -->
+                        <li class="nav-item">
+                           <a class="nav-link" href="/login/"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                        </li>
+                          <li class="nav-item">
+                           <a class="nav-link" href="/admin/"><i class="fa-solid fa-right-to-bracket"></i> Admin Login</a>
+                        </li>
+
+
+
+                     </ul>
+
+                  </div>
+               </div>
+            </nav>
+
+         </div>
+      </div>
+      <!-- end menu -->
+      <div class="row">
+         <div class="col-sm-12" style="min-height: 100px;">
+            {% block content %}
+
+            {% endblock %}
+
+         </div>
+      </div>
+
+
+      <div class="row ufooter mt-4">
+         <div class="col-sm-10 mx-auto">
+            <div class="row p-4">
+               <div class="col-sm-3 ps-3 text-light">
+                  <h5>About Website</h5>
+                  <p style="font-size: 12px;">Byte Academy is a modern educational website designeddata science, and app
+                     development. With expert-led tutorials,
+                     hands-on projects, and a user-friendly interface, Byte Academy empowers learners to build
+                     real-world
+                     skills and advance their careers in the digital age.</p>
+               </div>
+               <div class="col-sm-3 ps-5 text-light">
+                  <a href="/index/">
+                     <p><i class="fa-solid fa-arrow-right "></i>Home</p>
+                  </a>
+                  <a href="/aboutus/">
+                     <p><i class="fa-solid fa-arrow-right "></i>aboutous</p>
+                  </a>
+                  <a href="/team/">
+                     <p><i class="fa-solid fa-arrow-right "></i>Our Team</p>
+                  </a>
+                  <a href="/services/">
+                     <p><i class="fa-solid fa-arrow-right "></i>Our Services</p>
+                  </a>
+                  <a href="/contact/">
+                     <p><i class="fa-solid fa-arrow-right "></i>Contact us</p>
+                  </a>
+
+               </div>
+               <div class="col-sm-3 ps-5 text-light">
+                  <a href="/index/">
+                     <p><i class="fa-solid fa-arrow-right "></i>Home</p>
+                  </a>
+                  <a href="/aboutus/">
+                     <p><i class="fa-solid fa-arrow-right "></i>aboutous</p>
+                  </a>
+                  <a href="/team/">
+                     <p><i class="fa-solid fa-arrow-right "></i>Our Team</p>
+                  </a>
+                  <a href="/services/">
+                     <p><i class="fa-solid fa-arrow-right "></i>Our Services</p>
+                  </a>
+                  <a href="/contact/">
+                     <p><i class="fa-solid fa-arrow-right "></i>Contact us</p>
+                  </a>
+
+               </div>
+               <div class="col-sm-3 text-light">
+                  <h5>Get in touch</h5>
+                  <p><i class="fa-solid fa-location-dot ic"></i> Address:vikas nagar lucknow 226022</p>
+                  <p><i class="fa-solid fa-phone ic"></i> 7266079663</p>
+                  <p>
+                     <a href="https://www.instagram.com/shivam._.yadav007?igsh=bnhlN3RlOG5qNWw4"><i class="fa-brands fa-instagram"></i></a>
+                     <a href="https://www.facebook.com/shivam.yadav.728711"><i class="fa-brands fa-facebook ic"></i></a>
+                     <a href="https://www.linkedin.com/in/shivam-yadav-5950442b1"><i class="fa-brands fa-linkedin"></i></a>
+                     
+                    
+                  </p>
+                  <p><i class="fa-solid fa-envelope ic"></i> Email: shivamyadav@gmial.com</p>
+               </div>
+            </div>
+            <div class="row bfooter text-light text-center">
+               <span style="line-height: 50px;">Developed by shivam yadav &copy; <a target="_blank"
+                     href="/profile/"></a></span>
+            </div>
+         </div>
+      </div>
+  <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/69b5807c79984a1c3cd83c0a/1jjmfs3sk';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+   </div>
+   <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+</body>
+
+</html>

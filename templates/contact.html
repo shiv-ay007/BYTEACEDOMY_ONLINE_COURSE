@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="row py-2">
+  <p class="fs-3 text-center">Contact<b class="text-mycolor1">Us</b></p>
+  <div class="col-sm-8 mx-auto">
+    <div class="row py-3">
+      <div class="col-sm-6 contact  p-5">
+  <form method="post">
+    {% csrf_token %}
+    <input type="text" class="form-control txt my-2" required placeholder="Name..." name="name"><hr style="color:green;" />
+    <input type="email" class="form-control txt my-2" required placeholder="Email..." name="email"><hr style="color:green;" />
+    <input type="tel" class="form-control txt my-2" required placeholder="Mobile..." name="mob"><hr style="color:green;" />
+    <textarea class="form-control ta my-2" rows="4" required placeholder="Message..." name="msg"></textarea><hr style="color:green;" />
+    <input type="submit" value="Save" class="form-control bg-mycolor1 btn1 mt-3 text-light">
+  </form>
+      </div>
+      <div class="col-sm-6 bgcontact p-5">
+        <p class="fs-5">Contact <b class="text-mycolor1">Address :</b></p>
+        <p><i class="fa-solid fa-location-dot"></i> Sec-5 Vikas Nagar,Tedhi Pulia,Lucknow</p>
+        <p><i class="fa-solid fa-phone"></i>+91-7266079663</p>
+          <p><i class="fa-solid fa-phone"></i>+91-7266079663</p>
+          <p>
+           <a href="https://www.instagram.com/shivam._.yadav007?igsh=bnhlN3RlOG5qNWw4"><i class="fa-brands fa-instagram ic"></i></a> 
+              <i class="fa-brands fa-square-facebook  ic"></i>
+                        <i class="fa-brands fa-twitter  ic"></i>
+                        <i class="fa-brands fa-youtube  ic"></i>
+                        <i class="fa-brands fa-linkedin ic"></i></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

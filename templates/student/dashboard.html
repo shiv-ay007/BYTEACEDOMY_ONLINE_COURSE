@@ -1,0 +1,128 @@
+{% extends 'student_base.html' %}
+{% load static %}
+
+{% block content %}
+{% if not request.session.email %}
+<script>
+alert("you have to login first");location.href="/login/"
+</script>
+{% endif %}
+
+ <div class="row py-2">
+
+<p class="fs-3 text-center">welcome <b class="text-mycolor1">Shivam Yadav</b></p> 
+  <div class="col-sm-10 mx-auto">
+    <div class="row py-3" id="dashboard">
+      <!--Dashboard card start-->
+      <div class="col-sm-3 mb-3" id="dashboard">
+        <a href="/student/profile/">
+        <div class="card mx-auto shadow-lg border border-0 w-75 rounded-4 dashboardcard">
+          <div class="text-center dashdiv"><i class="fa-solid fa-user dashboardic" style="background: #EF9A9A;"></i></div>
+          <h4 class="text-center mb-5">profile</h4>
+        </div>
+        </a>
+      </div>
+      <!--Dashboard card end-->
+            <!--Dashboard card start-->
+      <div class="col-sm-3 mb-3" id="dashboard">
+        <a href="/student/lecturecat/">
+        <div class="card mx-auto shadow-lg border border-0 w-75 rounded-4 dashboardcard">
+         <div class="text-center dashdiv">
+        <img src="/static/images/category.png" alt="PHP Logo" 
+             style="width:60px; height:60px; border-radius:10px; background:#8e3d15; padding:8px;">
+      </div>
+          <h4 class="text-center mb-5">category</h4>
+        </div>
+        </a>
+      </div>
+      <!--Dashboard card end-->
+            <!--Dashboard card start-->
+      <div class="col-sm-3 mb-3" id="dashboard">
+        <a href="/student/python/">
+        <div class="card mx-auto shadow-lg border border-0 w-75 rounded-4 dashboardcard">
+         <div class="text-center dashdiv">
+        <img src="/static/images/python.webp" alt="PHP Logo" 
+             style="width:60px; height:60px; border-radius:10px; background:#d5cb8c; padding:8px;">
+      </div>
+          <h4 class="text-center mb-5"> Python</h4>
+        </div>
+        </a>
+      </div>
+      <!--Dashboard card end-->
+            <!--Dashboard card start-->
+      <div class="col-sm-3 mb-3" id="dashboard">
+        <a href="/student/bootstrap/">
+        <div class="card mx-auto shadow-lg border border-0 w-75 rounded-4 dashboardcard">
+          <div class="text-center dashdiv">
+        <img src="/static/images/bootstrap.png" alt="PHP Logo" 
+             style="width:60px; height:60px; border-radius:10px; background:#3ecdd2; padding:8px;">
+      </div>
+          <h4 class="text-center mb-5"> bootstrap</h4>
+        </div>
+        </a>
+      </div>
+      <!--Dashboard card end-->
+    </div>
+    
+    <div class="row py-3" id="dashboard">
+      <!--Dashboard card start-->
+      <div class="col-sm-3 mb-3" id="dashboard">
+        <a href="/student/java/">
+        <div class="card mx-auto shadow-lg border border-0 w-75 rounded-4 dashboardcard">
+         <div class="text-center dashdiv">
+        <img src="/static/images/java.webp" alt="PHP Logo" 
+             style="width:60px; height:60px; border-radius:10px; background:#f53d0a; padding:8px;">
+      </div>
+          <h4 class="text-center mb-5">Java</h4>
+        </div>
+        </a>
+      </div>
+      <!--Dashboard card end-->
+            <!--Dashboard card start-->
+      <div class="col-sm-3 mb-3" id="dashboard">
+        <a href="/student/csharp/">
+        <div class="card mx-auto shadow-lg border border-0 w-75 rounded-4 dashboardcard">
+          <div class="text-center dashdiv">
+        <img src="/static/images/csharp logo.png" alt="PHP Logo" 
+             style="width:60px; height:60px; border-radius:10px; background:#e79d2edf; padding:8px;">
+      </div>
+          <h4 class="text-center mb-5"> C#</h4>
+        </div>
+        </a>
+      </div>
+      <!--Dashboard card end-->
+            <!--Dashboard card start-->
+      <div class="col-sm-3 mb-3" id="dashboard">
+        <a href="/student/clanguage/">
+        <div class="card mx-auto shadow-lg border border-0 w-75 rounded-4 dashboardcard">
+         <div class="text-center dashdiv">
+        <img src="/static/images/c lang.webp" alt="PHP Logo" 
+             style="width:60px; height:60px; border-radius:10px; background:#0c8886; padding:8px;">
+      </div>
+          <h4 class="text-center mb-5">c.programing</h4>
+        </div>
+        </a>
+      </div>
+      <!--Dashboard card end-->
+            <!--Dashboard card start-->
+     <div class="col-sm-3 mb-3" id="dashboard">
+  <a href="/student/php/">
+    <div class="card mx-auto shadow-lg border border-0 w-75 rounded-4 dashboardcard">
+      
+      <!-- Replace icon with image -->
+      <div class="text-center dashdiv">
+        <img src="/static/images/php logo.webp" alt="PHP Logo" 
+             style="width:60px; height:60px; border-radius:10px; background:#FFCC80; padding:8px;">
+      </div>
+      
+      <h4 class="text-center mb-5">PHP</h4>
+    </div>
+  </a>
+</div>
+
+      <!--Dashboard card end-->
+    </div>
+  </div>     
+    </div>
+
+{% endblock %}

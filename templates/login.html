@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<style>
+  body {
+
+    min-height: 100vh;
+  }
+  .login-container {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .login-card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+    padding: 2.5rem 2rem;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    overflow: hidden;
+    animation: slideIn 1s cubic-bezier(.68,-0.55,.27,1.55);
+  }
+  @keyframes slideIn {
+    0% { transform: translateY(-60px) scale(0.9); opacity: 0; }
+    100% { transform: translateY(0) scale(1); opacity: 1; }
+  }
+  .login-title {
+    font-weight: 700;
+    color:  #B2EBF2;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+  }
+  .form-control:focus {
+    border-color:  #B2EBF2;
+    box-shadow: 0 0 0 0.2rem rgba(37,117,252,.15);
+  }
+  .login-btn {
+    background: linear-gradient(90deg,  #B2EBF2 0%, #2575fc 100%);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 0.5rem 2rem;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
+  }
+  .login-btn:hover {
+    background: linear-gradient(90deg, #2575fc 0%,  #B2EBF2 100%);
+    transform: scale(1.05);
+  }
+  .login-anim {
+    width: 100px;
+    display: block;
+    margin: 0 auto 1.5rem auto;
+    animation: float 2.5s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-18px); }
+  }
+  .login-link {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    color: #00bcd4;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+  }
+  .login-link:hover {
+    color:  #B2EBF2;
+    text-decoration: underline;
+  }
+</style>
+<div class="row">
+    <div class="col-sm-6 mx-auto">
+<div class="row heading mt-3">
+    <div class="text-center fs-3">Sign <b class="text-mycolor1"> In <i class="fa-solid fa-key"></i></b>
+    <p class="text-muted fs-6">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+    <hr>
+</div>
+<div class="login-container">
+  <div class="login-card">
+
+    <h2 class="login-title">Sign In</h2>
+    <form method="post">
+      {% csrf_token %}
+      <div class="mb-3">
+        <label for="username" class="form-label">UserID</label>
+       <div class="input-group">
+        <i class="input-group-text"><i class="fa-solid fa-user"></i></i>
+         <input type="email"  class="form-control" id="username" name="email" placeholder="Enter your UserID" required>
+       </div>
+      </div>
+      <div class="mb-3">
+        <label for="password"  class="form-label">Password</label>
+           <div class="input-group">
+        <i class="input-group-text"><i class="fa-solid fa-key"></i></i>
+       <input type="password" class="form-control" id="password" name="passwd" placeholder="Enter your password" required>
+      </div>
+      </div>
+      <button type="submit" class="btn login-btn w-100">Login</button>
+    </form>
+    <a href="/register/" class="login-link">Forgot password?</a>
+    <a href="/register/" class="login-link">Create an account</a>
+  </div>
+</div></div>
+</div>
+{% endblock %}

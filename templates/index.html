@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<style>
+  .service-card {
+
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: 0.4s;
+    background: white;
+
+  }
+
+  .service-card img {
+
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: 0.5s;
+
+  }
+
+  .service-content {
+
+    padding: 15px;
+    text-align: center;
+
+  }
+
+  .service-card:hover {
+
+    transform: translateY(-10px);
+
+  }
+
+  .service-card:hover img {
+
+    transform: scale(1.1);
+
+  }
+</style>
+
+<!-- start slider -->
+<div class="row slider">
+  <div class="col-sm-10 mx-auto">
+    <div class="row">
+      <!-- slider content -->
+      <div class="col-sm-7 py-5">
+        <div class="fs-1 text-center mt-5 pt-5 text-light text-uppercase">Welcome to BYTE <b class="text-mycolor1">
+            ACEDEMY <i class="fa-solid fa-graduation-cap"></i></b>
+        </div>
+        <div class="text-light text-center ">Byte Academy is a modern educational website designeddata science, and app
+          development. With expert-led tutorials,
+          hands-on projects, and a user-friendly interface, Byte Academy empowers learners to build real-world skills
+          and advance their careers in the digital age.!</div>
+        <a href="/register/" class="btn btn-lg bg-mycolor1 text-light mt-5 d-block w-25 mx-auto rounded-pill">Register
+          Now</a>
+      </div>
+      <!-- end slider content -->
+      <!-- slider form -->
+      <div class="col-sm-5 login my-5 p-5">
+        <span
+          class="position-absolute top-0 start-50 translate-middle start-50 bg-mycolor1 py-2 px-3 fs-4 text-light rounded-3">Contact
+          Us</span>
+        <form method="post">
+          {% csrf_token %}
+          <input type="text" required placeholder="Name.." name="name" class="form-control txt ">
+          <input type="email" required placeholder="Email.." name="email" class="form-control txt ">
+          <input type="number" required placeholder="Mobile.." name="mob" class="form-control txt ">
+          <textarea class="form-control ta" name="msg" placeholder="Message.."></textarea>
+          <button type="submit" class="form-control bg-mycolor1  btn1">Save</button>
+
+        </form>
+      </div>
+      <!-- end slider form -->
+    </div>
+  </div>
+</div>
+<!-- end slider -->
+</hr>
+<!-- start services -->
+<div class="row services py-3">
+  <p class="text-center fs-3">Our <b class="text-mycolor1">Services</b></p>
+  <div class="col-sm-10 mx-auto">
+    <!--service row strt-->
+    <div class="row py-2">
+      <!--card start-->
+      <div class="col-md-4">
+      <div class="service-card">
+
+        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4" class="img-fluid">
+
+        <div class="service-content">
+          <h5>Programming Courses</h5>
+          <p>Learn programming fundamentals with practical projects and expert guidance.</p>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- Service 2 -->
+    <div class="col-md-4">
+      <div class="service-card">
+
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" class="img-fluid">
+
+        <div class="service-content">
+          <h5>Web Development</h5>
+          <p>Master HTML, CSS, JavaScript and full stack development.</p>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- Service 3 -->
+    <div class="col-md-4">
+      <div class="service-card">
+
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" class="img-fluid">
+
+        <div class="service-content">
+          <h5>Java Development</h5>
+          <p>Learn Java programming and build real world applications.</p>
+        </div>
+
+      </div>
+    </div>
+      <!--card end-->
+    </div>
+    <!--service end-->
+  </div>
+</div>
+
+<div class="row product"></div>
+<div class="row intero"></div>
+<div class="row contactus"></div>
+
+
+
+{% endblock %}
